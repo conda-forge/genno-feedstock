@@ -1,13 +1,13 @@
 {% set name = "genno" %}
-{% set version = "1.26.0" %}
+{% set version = "1.27.1" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 35ddd8e52873009e70b10f26af8b8d1eb5c8409415ec2b9eb0470b694dbf34bc
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5d8c4fdbc3cee2d23d96a7503df7f11cf02eb1b364f1f72aaf569d024e4fa897
 
 build:
   noarch: python
@@ -16,13 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - dask >=2.14
     - graphviz
     - importlib_resources
-    - python >=3.7
+    - python >={{ python_min }}
     - pandas >=1.0
     - pint
     - plotnine
@@ -31,6 +32,8 @@ requirements:
     - xarray >=0.17
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - genno
     - genno.compat.plotnine
