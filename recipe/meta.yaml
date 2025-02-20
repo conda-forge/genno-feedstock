@@ -1,5 +1,5 @@
 {% set name = "genno" %}
-{% set version = "1.27.1" %}
+{% set version = "1.28.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5d8c4fdbc3cee2d23d96a7503df7f11cf02eb1b364f1f72aaf569d024e4fa897
+  sha256: 9ddc0de83a6279525feda8963dd84420d2930a5546786b18d4fdc16de019c8dd
 
 build:
   noarch: python
