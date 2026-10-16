@@ -1,13 +1,13 @@
 {% set name = "genno" %}
-{% set version = "1.30.1" %}
+{% set version = "1.31.0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d393a2306c5ef97f42266b13bc601879abcead1609bf2d59db8223613fe802b2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a75b78303e1921f7cc0ba0efe0c8df74a8bd69379355d2f877138f7e4c16d635
 
 build:
   noarch: python
